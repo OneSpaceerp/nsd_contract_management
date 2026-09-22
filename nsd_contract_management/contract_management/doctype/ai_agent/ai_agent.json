@@ -87,9 +87,10 @@
    "label": "Permitted Tool Registry"
   },
   {
+   "description": "Comma-separated list of permitted tools (e.g., search_contracts, get_contract, compare_versions, get_clause, get_playbook, create_review, create_task, create_obligation, create_renewal, draft_document, send_for_approval, create_signature_request, query_erp_transaction, query_crm_record, create_report)",
    "fieldname": "allowed_tools",
    "fieldtype": "Small Text",
-   "label": "Allowed Tools (Comma-separated: search_contracts, get_contract, compare_versions, get_clause, get_playbook, create_review, create_task, create_obligation, create_renewal, draft_document, send_for_approval, create_signature_request, query_erp_transaction, query_crm_record, create_report)"
+   "label": "Allowed Tools"
   },
   {
    "fieldname": "section_break_policy",
