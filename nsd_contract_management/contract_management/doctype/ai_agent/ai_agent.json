@@ -1,0 +1,138 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:code",
+ "creation": "2026-09-22 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "agent_name",
+  "code",
+  "agent_type",
+  "active",
+  "requires_human_approval",
+  "max_actions_per_run",
+  "column_break_1",
+  "model_provider",
+  "model",
+  "section_break_tools",
+  "allowed_tools",
+  "section_break_policy",
+  "system_policy",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "agent_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Agent Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Agent Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "Review Agent",
+   "fieldname": "agent_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Agent Role / Specialization",
+   "options": "Intake Agent\nDrafting Agent\nReview Agent\nRisk Agent\nNegotiation Agent\nApproval Agent\nObligation Agent\nRenewal Agent\nCompliance Agent\nPerformance Agent\nExecutive Agent\nRelationship Agent",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Active"
+  },
+  {
+   "default": "1",
+   "fieldname": "requires_human_approval",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Requires Human Approval for High-Impact Actions"
+  },
+  {
+   "default": "5",
+   "fieldname": "max_actions_per_run",
+   "fieldtype": "Int",
+   "label": "Max Actions Per Run"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "model_provider",
+   "fieldtype": "Link",
+   "label": "Model Provider",
+   "options": "AI Model Provider"
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "label": "Model Identifier"
+  },
+  {
+   "fieldname": "section_break_tools",
+   "fieldtype": "Section Break",
+   "label": "Permitted Tool Registry"
+  },
+  {
+   "fieldname": "allowed_tools",
+   "fieldtype": "Small Text",
+   "label": "Allowed Tools (Comma-separated: search_contracts, get_contract, compare_versions, get_clause, get_playbook, create_review, create_task, create_obligation, create_renewal, draft_document, send_for_approval, create_signature_request, query_erp_transaction, query_crm_record, create_report)"
+  },
+  {
+   "fieldname": "section_break_policy",
+   "fieldtype": "Section Break",
+   "label": "Agent Instructions & Guardrails"
+  },
+  {
+   "fieldname": "system_policy",
+   "fieldtype": "Text Editor",
+   "label": "System Instructions"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  }
+ ],
+ "links": [],
+ "modified": "2026-09-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Contract Management",
+ "name": "AI Agent",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "AI Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Contract Manager"
+  }
+ ],
+ "sort_field": "agent_name",
+ "sort_order": "ASC",
+ "track_changes": 1
+}

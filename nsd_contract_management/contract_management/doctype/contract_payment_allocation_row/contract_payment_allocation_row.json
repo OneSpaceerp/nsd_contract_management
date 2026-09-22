@@ -1,0 +1,66 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-09-22 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "contract",
+  "allocated_amount",
+  "currency",
+  "reference_doctype",
+  "reference_name",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "contract",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Contract",
+   "options": "Contract",
+   "reqd": 1
+  },
+  {
+   "fieldname": "allocated_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Allocated Amount",
+   "options": "currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "reference_doctype",
+   "fieldtype": "Data",
+   "label": "Ref DocType"
+  },
+  {
+   "fieldname": "reference_name",
+   "fieldtype": "Data",
+   "label": "Ref Document"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Allocation Notes"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2026-09-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Contract Management",
+ "name": "Contract Payment Allocation Row",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "track_changes": 0
+}

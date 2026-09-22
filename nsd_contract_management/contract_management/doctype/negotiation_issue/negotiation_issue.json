@@ -1,0 +1,132 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "ISSUE-.YYYY.-.#####",
+ "creation": "2026-09-22 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "negotiation_round",
+  "contract",
+  "clause",
+  "issue_type",
+  "severity",
+  "status",
+  "requires_approval",
+  "section_break_positions",
+  "counterparty_position",
+  "company_position",
+  "fallback_position",
+  "recommended_action"
+ ],
+ "fields": [
+  {
+   "fieldname": "negotiation_round",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Negotiation Round",
+   "options": "Negotiation Round",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contract",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Contract",
+   "options": "Contract"
+  },
+  {
+   "fieldname": "clause",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Clause",
+   "options": "Clause"
+  },
+  {
+   "default": "Liability",
+   "fieldname": "issue_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Issue Type",
+   "options": "Liability\nPayment\nTermination\nIP\nPrivacy\nSLA\nOther",
+   "reqd": 1
+  },
+  {
+   "default": "Medium",
+   "fieldname": "severity",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Severity",
+   "options": "Low\nMedium\nHigh\nCritical",
+   "reqd": 1
+  },
+  {
+   "default": "Open",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Open\nAccepted\nRejected\nResolved",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "requires_approval",
+   "fieldtype": "Check",
+   "label": "Requires Approval"
+  },
+  {
+   "fieldname": "section_break_positions",
+   "fieldtype": "Section Break",
+   "label": "Positions & Recommendations"
+  },
+  {
+   "fieldname": "counterparty_position",
+   "fieldtype": "Text Editor",
+   "label": "Counterparty Stance"
+  },
+  {
+   "fieldname": "company_position",
+   "fieldtype": "Text Editor",
+   "label": "Our Preferred Position"
+  },
+  {
+   "fieldname": "fallback_position",
+   "fieldtype": "Text Editor",
+   "label": "Approved Fallback Position"
+  },
+  {
+   "fieldname": "recommended_action",
+   "fieldtype": "Text Editor",
+   "label": "AI / Legal Recommended Compromise"
+  }
+ ],
+ "links": [],
+ "modified": "2026-09-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Contract Management",
+ "name": "Negotiation Issue",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Contract Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

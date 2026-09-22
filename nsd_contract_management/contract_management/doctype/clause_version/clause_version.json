@@ -1,0 +1,144 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{clause}-V{version_no}",
+ "creation": "2026-09-22 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "clause",
+  "version_no",
+  "version_label",
+  "status",
+  "column_break_1",
+  "effective_from",
+  "effective_to",
+  "language",
+  "approved_by",
+  "approval_date",
+  "section_break_content",
+  "text",
+  "fallback_text",
+  "prohibited_text",
+  "risk_explanation"
+ ],
+ "fields": [
+  {
+   "fieldname": "clause",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Clause",
+   "options": "Clause",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "version_no",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Version No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "version_label",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Version Label"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nApproved\nRetired",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "effective_from",
+   "fieldtype": "Date",
+   "label": "Effective From"
+  },
+  {
+   "fieldname": "effective_to",
+   "fieldtype": "Date",
+   "label": "Effective To"
+  },
+  {
+   "default": "English",
+   "fieldname": "language",
+   "fieldtype": "Select",
+   "label": "Language",
+   "options": "English\nArabic\nBilingual\nOther"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User"
+  },
+  {
+   "fieldname": "approval_date",
+   "fieldtype": "Date",
+   "label": "Approval Date"
+  },
+  {
+   "fieldname": "section_break_content",
+   "fieldtype": "Section Break",
+   "label": "Clause Wording"
+  },
+  {
+   "fieldname": "text",
+   "fieldtype": "Text Editor",
+   "label": "Preferred Standard Text",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fallback_text",
+   "fieldtype": "Text Editor",
+   "label": "Acceptable Fallback Text"
+  },
+  {
+   "fieldname": "prohibited_text",
+   "fieldtype": "Text Editor",
+   "label": "Prohibited Variations"
+  },
+  {
+   "fieldname": "risk_explanation",
+   "fieldtype": "Text Editor",
+   "label": "Risk & Legal Guidance"
+  }
+ ],
+ "links": [],
+ "modified": "2026-09-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Contract Management",
+ "name": "Clause Version",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Legal Counsel",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "sort_field": "version_no",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,132 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "REV-.YYYY.-.#####",
+ "creation": "2026-09-22 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "contract",
+  "review_type",
+  "status",
+  "assigned_to",
+  "due_date",
+  "column_break_1",
+  "decision",
+  "risk_score",
+  "source_version",
+  "started_on",
+  "completed_on",
+  "section_break_comments",
+  "comments"
+ ],
+ "fields": [
+  {
+   "fieldname": "contract",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Contract",
+   "options": "Contract",
+   "reqd": 1
+  },
+  {
+   "fieldname": "review_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Review Type",
+   "options": "Legal\nCommercial\nFinance\nCompliance\nSecurity\nAI",
+   "reqd": 1
+  },
+  {
+   "default": "Pending",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Pending\nIn Progress\nCompleted\nRejected",
+   "reqd": 1
+  },
+  {
+   "fieldname": "assigned_to",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Assigned Reviewer",
+   "options": "User"
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Due Date"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "decision",
+   "fieldtype": "Select",
+   "label": "Review Decision",
+   "options": "Approved\nChanges Requested\nRejected\nNo Objection"
+  },
+  {
+   "fieldname": "risk_score",
+   "fieldtype": "Float",
+   "label": "Risk Score"
+  },
+  {
+   "fieldname": "source_version",
+   "fieldtype": "Link",
+   "label": "Reviewed Version",
+   "options": "Contract Version"
+  },
+  {
+   "fieldname": "started_on",
+   "fieldtype": "Datetime",
+   "label": "Started On"
+  },
+  {
+   "fieldname": "completed_on",
+   "fieldtype": "Datetime",
+   "label": "Completed On"
+  },
+  {
+   "fieldname": "section_break_comments",
+   "fieldtype": "Section Break",
+   "label": "Review Comments & Findings"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Text Editor",
+   "label": "Comments"
+  }
+ ],
+ "links": [],
+ "modified": "2026-09-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Contract Management",
+ "name": "Contract Review",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Contract Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

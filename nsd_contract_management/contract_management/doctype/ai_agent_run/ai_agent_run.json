@@ -1,0 +1,122 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "RUN-.YYYY.-.#####",
+ "creation": "2026-09-22 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "agent",
+  "status",
+  "initiated_by",
+  "trigger_type",
+  "input_reference",
+  "column_break_1",
+  "started_on",
+  "completed_on",
+  "trace_id",
+  "cost",
+  "section_break_summary",
+  "summary"
+ ],
+ "fields": [
+  {
+   "fieldname": "agent",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Agent",
+   "options": "AI Agent",
+   "reqd": 1
+  },
+  {
+   "default": "Queued",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Run Status",
+   "options": "Queued\nRunning\nCompleted\nFailed\nAwaiting Approval",
+   "reqd": 1
+  },
+  {
+   "fieldname": "initiated_by",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Initiated By",
+   "options": "User"
+  },
+  {
+   "default": "Manual",
+   "fieldname": "trigger_type",
+   "fieldtype": "Select",
+   "label": "Trigger Type",
+   "options": "Manual\nWebhook\nScheduled\nEvent"
+  },
+  {
+   "fieldname": "input_reference",
+   "fieldtype": "Data",
+   "label": "Context Document Ref"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "started_on",
+   "fieldtype": "Datetime",
+   "label": "Started On"
+  },
+  {
+   "fieldname": "completed_on",
+   "fieldtype": "Datetime",
+   "label": "Completed On"
+  },
+  {
+   "fieldname": "trace_id",
+   "fieldtype": "Data",
+   "label": "Execution Trace ID"
+  },
+  {
+   "fieldname": "cost",
+   "fieldtype": "Currency",
+   "label": "Token Cost (USD)"
+  },
+  {
+   "fieldname": "section_break_summary",
+   "fieldtype": "Section Break",
+   "label": "Execution Summary & Log"
+  },
+  {
+   "fieldname": "summary",
+   "fieldtype": "Long Text",
+   "label": "Run Output Summary"
+  }
+ ],
+ "links": [],
+ "modified": "2026-09-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Contract Management",
+ "name": "AI Agent Run",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Contract Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

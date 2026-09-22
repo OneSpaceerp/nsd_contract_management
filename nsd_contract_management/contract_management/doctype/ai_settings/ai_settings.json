@@ -1,0 +1,86 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-09-22 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "default_provider",
+  "enable_prompt_defense",
+  "human_approval_required_for_tools",
+  "column_break_1",
+  "default_extraction_policy",
+  "default_risk_policy",
+  "max_monthly_budget"
+ ],
+ "fields": [
+  {
+   "fieldname": "default_provider",
+   "fieldtype": "Link",
+   "label": "Default AI Model Provider",
+   "options": "AI Model Provider"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_prompt_defense",
+   "fieldtype": "Check",
+   "label": "Enable Prompt Injection Sanitization & Defense"
+  },
+  {
+   "default": "1",
+   "fieldname": "human_approval_required_for_tools",
+   "fieldtype": "Check",
+   "label": "Require Human Approval for High-Impact Actions"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "default_extraction_policy",
+   "fieldtype": "Link",
+   "label": "Default Extraction Policy",
+   "options": "AI Prompt Policy"
+  },
+  {
+   "fieldname": "default_risk_policy",
+   "fieldtype": "Link",
+   "label": "Default Risk Policy",
+   "options": "AI Prompt Policy"
+  },
+  {
+   "default": "500",
+   "fieldname": "max_monthly_budget",
+   "fieldtype": "Currency",
+   "label": "Monthly AI Budget Guardrail (USD)"
+  }
+ ],
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-09-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Contract Management",
+ "name": "AI Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "AI Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

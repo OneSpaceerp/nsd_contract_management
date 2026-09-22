@@ -1,0 +1,124 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "APP-.YYYY.-.#####",
+ "creation": "2026-09-22 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "contract",
+  "matrix",
+  "approval_status",
+  "current_step",
+  "column_break_1",
+  "final_decision",
+  "requested_on",
+  "completed_on",
+  "section_break_steps",
+  "steps",
+  "section_break_comments",
+  "comments"
+ ],
+ "fields": [
+  {
+   "fieldname": "contract",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Contract",
+   "options": "Contract",
+   "reqd": 1
+  },
+  {
+   "fieldname": "matrix",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Applied Matrix",
+   "options": "Approval Matrix"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "approval_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Approval Status",
+   "options": "Pending\nApproved\nRejected\nCancelled",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "current_step",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Current Step No"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "final_decision",
+   "fieldtype": "Select",
+   "label": "Final Decision",
+   "options": "Approved\nRejected"
+  },
+  {
+   "fieldname": "requested_on",
+   "fieldtype": "Datetime",
+   "label": "Requested On"
+  },
+  {
+   "fieldname": "completed_on",
+   "fieldtype": "Datetime",
+   "label": "Completed On"
+  },
+  {
+   "fieldname": "section_break_steps",
+   "fieldtype": "Section Break",
+   "label": "Sequential Approval Steps"
+  },
+  {
+   "fieldname": "steps",
+   "fieldtype": "Table",
+   "label": "Steps",
+   "options": "Contract Approval Step Row"
+  },
+  {
+   "fieldname": "section_break_comments",
+   "fieldtype": "Section Break",
+   "label": "Comments & Audit Notes"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Text Editor",
+   "label": "Comments"
+  }
+ ],
+ "links": [],
+ "modified": "2026-09-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Contract Management",
+ "name": "Contract Approval",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Contract Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,134 @@
+[
+	{
+		"doctype": "Custom Field",
+		"name": "Opportunity-contract",
+		"dt": "Opportunity",
+		"fieldname": "contract",
+		"fieldtype": "Link",
+		"insert_after": "opportunity_from",
+		"label": "Governing Contract",
+		"module": "Contract Management",
+		"options": "Contract"
+	},
+	{
+		"doctype": "Custom Field",
+		"name": "Quotation-contract",
+		"dt": "Quotation",
+		"fieldname": "contract",
+		"fieldtype": "Link",
+		"insert_after": "party_name",
+		"label": "Governing Contract",
+		"module": "Contract Management",
+		"options": "Contract"
+	},
+	{
+		"doctype": "Custom Field",
+		"name": "Sales Order-contract",
+		"dt": "Sales Order",
+		"fieldname": "contract",
+		"fieldtype": "Link",
+		"insert_after": "customer",
+		"label": "Governing Contract",
+		"module": "Contract Management",
+		"options": "Contract"
+	},
+	{
+		"doctype": "Custom Field",
+		"name": "Delivery Note-contract",
+		"dt": "Delivery Note",
+		"fieldname": "contract",
+		"fieldtype": "Link",
+		"insert_after": "customer",
+		"label": "Governing Contract",
+		"module": "Contract Management",
+		"options": "Contract"
+	},
+	{
+		"doctype": "Custom Field",
+		"name": "Sales Invoice-contract",
+		"dt": "Sales Invoice",
+		"fieldname": "contract",
+		"fieldtype": "Link",
+		"insert_after": "customer",
+		"label": "Governing Contract",
+		"module": "Contract Management",
+		"options": "Contract"
+	},
+	{
+		"doctype": "Custom Field",
+		"name": "Purchase Order-contract",
+		"dt": "Purchase Order",
+		"fieldname": "contract",
+		"fieldtype": "Link",
+		"insert_after": "supplier",
+		"label": "Governing Contract",
+		"module": "Contract Management",
+		"options": "Contract"
+	},
+	{
+		"doctype": "Custom Field",
+		"name": "Purchase Receipt-contract",
+		"dt": "Purchase Receipt",
+		"fieldname": "contract",
+		"fieldtype": "Link",
+		"insert_after": "supplier",
+		"label": "Governing Contract",
+		"module": "Contract Management",
+		"options": "Contract"
+	},
+	{
+		"doctype": "Custom Field",
+		"name": "Purchase Invoice-contract",
+		"dt": "Purchase Invoice",
+		"fieldname": "contract",
+		"fieldtype": "Link",
+		"insert_after": "supplier",
+		"label": "Governing Contract",
+		"module": "Contract Management",
+		"options": "Contract"
+	},
+	{
+		"doctype": "Custom Field",
+		"name": "Project-contract",
+		"dt": "Project",
+		"fieldname": "contract",
+		"fieldtype": "Link",
+		"insert_after": "customer",
+		"label": "Governing Contract",
+		"module": "Contract Management",
+		"options": "Contract"
+	},
+	{
+		"doctype": "Custom Field",
+		"name": "Issue-contract",
+		"dt": "Issue",
+		"fieldname": "contract",
+		"fieldtype": "Link",
+		"insert_after": "customer",
+		"label": "Governing Contract",
+		"module": "Contract Management",
+		"options": "Contract"
+	},
+	{
+		"doctype": "Custom Field",
+		"name": "Subscription-contract",
+		"dt": "Subscription",
+		"fieldname": "contract",
+		"fieldtype": "Link",
+		"insert_after": "party",
+		"label": "Governing Contract",
+		"module": "Contract Management",
+		"options": "Contract"
+	},
+	{
+		"doctype": "Custom Field",
+		"name": "Asset-contract",
+		"dt": "Asset",
+		"fieldname": "contract",
+		"fieldtype": "Link",
+		"insert_after": "custodian",
+		"label": "Governing Contract",
+		"module": "Contract Management",
+		"options": "Contract"
+	}
+]

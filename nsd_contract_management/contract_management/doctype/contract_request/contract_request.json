@@ -1,0 +1,175 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "CTR-REQ-.YYYY.-.#####",
+ "creation": "2026-09-22 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "request_title",
+  "requested_by",
+  "company",
+  "contract_type",
+  "counterparty_name",
+  "status",
+  "column_break_1",
+  "target_start_date",
+  "target_end_date",
+  "estimated_value",
+  "currency",
+  "converted_contract",
+  "risk_flags",
+  "section_break_purpose",
+  "purpose",
+  "section_break_answers",
+  "intake_answers"
+ ],
+ "fields": [
+  {
+   "fieldname": "request_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Request Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "requested_by",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Requested By",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contract_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Contract Type",
+   "options": "Contract Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "counterparty_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Counterparty Name",
+   "reqd": 1
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nSubmitted\nIntake Validation\nClassified\nAccepted\nRejected\nContract Created",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "target_start_date",
+   "fieldtype": "Date",
+   "label": "Target Start Date"
+  },
+  {
+   "fieldname": "target_end_date",
+   "fieldtype": "Date",
+   "label": "Target End Date"
+  },
+  {
+   "fieldname": "estimated_value",
+   "fieldtype": "Currency",
+   "label": "Estimated Value",
+   "options": "currency"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "converted_contract",
+   "fieldtype": "Link",
+   "label": "Converted Contract",
+   "options": "Contract",
+   "read_only": 1
+  },
+  {
+   "fieldname": "risk_flags",
+   "fieldtype": "Small Text",
+   "label": "Risk Flags"
+  },
+  {
+   "fieldname": "section_break_purpose",
+   "fieldtype": "Section Break",
+   "label": "Business Purpose & Context"
+  },
+  {
+   "fieldname": "purpose",
+   "fieldtype": "Text Editor",
+   "label": "Purpose"
+  },
+  {
+   "fieldname": "section_break_answers",
+   "fieldtype": "Section Break",
+   "label": "Intake Questionnaire"
+  },
+  {
+   "fieldname": "intake_answers",
+   "fieldtype": "Table",
+   "label": "Intake Answers",
+   "options": "Contract Intake Answer Row"
+  }
+ ],
+ "links": [],
+ "modified": "2026-09-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Contract Management",
+ "name": "Contract Request",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Contract Requester",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Contract Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

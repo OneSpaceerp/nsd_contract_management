@@ -1,0 +1,148 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "REN-.YYYY.-.#####",
+ "creation": "2026-09-22 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "contract",
+  "renewal_type",
+  "status",
+  "decision",
+  "owner",
+  "column_break_1",
+  "current_expiration_date",
+  "notice_period_days",
+  "notice_deadline",
+  "renewal_start_date",
+  "renewal_end_date",
+  "renewal_value",
+  "currency",
+  "section_break_brief",
+  "ai_brief"
+ ],
+ "fields": [
+  {
+   "fieldname": "contract",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Contract",
+   "options": "Contract",
+   "reqd": 1
+  },
+  {
+   "default": "Manual",
+   "fieldname": "renewal_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Renewal Type",
+   "options": "Auto\nManual\nExtension",
+   "reqd": 1
+  },
+  {
+   "default": "Not Started",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Not Started\nIn Progress\nRenewed\nNot Renewed\nExpired",
+   "reqd": 1
+  },
+  {
+   "default": "Undecided",
+   "fieldname": "decision",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Decision",
+   "options": "Renew\nNegotiate\nTerminate\nUndecided"
+  },
+  {
+   "fieldname": "owner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Renewal Lead",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "current_expiration_date",
+   "fieldtype": "Date",
+   "label": "Current Expiration Date"
+  },
+  {
+   "fieldname": "notice_period_days",
+   "fieldtype": "Int",
+   "label": "Notice Period (Days)"
+  },
+  {
+   "fieldname": "notice_deadline",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Notice Deadline"
+  },
+  {
+   "fieldname": "renewal_start_date",
+   "fieldtype": "Date",
+   "label": "New Start Date"
+  },
+  {
+   "fieldname": "renewal_end_date",
+   "fieldtype": "Date",
+   "label": "New End Date"
+  },
+  {
+   "fieldname": "renewal_value",
+   "fieldtype": "Currency",
+   "label": "Projected Renewal Value",
+   "options": "currency"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "section_break_brief",
+   "fieldtype": "Section Break",
+   "label": "Renewal Strategy & AI Brief"
+  },
+  {
+   "fieldname": "ai_brief",
+   "fieldtype": "Long Text",
+   "label": "AI Renewal Intelligence Brief"
+  }
+ ],
+ "links": [],
+ "modified": "2026-09-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Contract Management",
+ "name": "Contract Renewal",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Contract Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "sort_field": "notice_deadline",
+ "sort_order": "ASC",
+ "track_changes": 1
+}

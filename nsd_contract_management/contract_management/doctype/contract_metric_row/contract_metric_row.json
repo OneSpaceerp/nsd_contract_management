@@ -1,0 +1,75 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-09-22 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "metric_name",
+  "metric_type",
+  "target_value",
+  "actual_value",
+  "unit",
+  "score",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "metric_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Metric Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "metric_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "SLA\nKPI\nFinancial\nVolume\nQuality\nCompliance"
+  },
+  {
+   "fieldname": "target_value",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Target"
+  },
+  {
+   "fieldname": "actual_value",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Actual"
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Data",
+   "label": "Unit"
+  },
+  {
+   "fieldname": "score",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Score (%)"
+  },
+  {
+   "default": "On Track",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "On Track\nAt Risk\nBreached"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2026-09-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Contract Management",
+ "name": "Contract Metric Row",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "track_changes": 0
+}

@@ -1,0 +1,454 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "CTR-.YYYY.-.#####",
+ "creation": "2026-09-22 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "contract_type",
+  "status",
+  "sub_status",
+  "company",
+  "legal_entity",
+  "counterparty_primary",
+  "column_break_1",
+  "contract_number",
+  "external_reference",
+  "source",
+  "business_owner",
+  "legal_owner",
+  "sales_owner",
+  "procurement_owner",
+  "current_version",
+  "parent_contract",
+  "tab_terms",
+  "effective_date",
+  "expiration_date",
+  "renewal_date",
+  "auto_renewal",
+  "notice_period_days",
+  "notice_deadline",
+  "column_break_terms",
+  "currency",
+  "contract_value",
+  "contract_value_type",
+  "payment_terms",
+  "governing_law",
+  "jurisdiction",
+  "contract_timezone",
+  "language",
+  "confidentiality",
+  "tab_parties",
+  "parties",
+  "tab_clauses",
+  "clauses",
+  "tab_key_terms",
+  "terms",
+  "tab_erp",
+  "erp_references",
+  "tab_execution_status",
+  "executed",
+  "executed_on",
+  "signed_document",
+  "archive_date",
+  "legal_hold",
+  "column_break_governance",
+  "risk_level",
+  "risk_score",
+  "compliance_score",
+  "performance_score",
+  "renewal_score",
+  "tab_summary",
+  "description",
+  "section_break_ai",
+  "ai_summary",
+  "ai_last_reviewed_on",
+  "tags"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contract_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Contract Type",
+   "options": "Contract Type",
+   "reqd": 1
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nIntake\nIn Review\nNegotiation\nApproval Pending\nSignature Pending\nExecuted\nEffective\nExpiring\nRenewal In Progress\nAmendment In Progress\nTerminated\nExpired\nArchived\nRejected\nCancelled\nOn Hold",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sub_status",
+   "fieldtype": "Data",
+   "label": "Sub Status"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "legal_entity",
+   "fieldtype": "Link",
+   "label": "Legal Entity",
+   "options": "Legal Entity"
+  },
+  {
+   "fieldname": "counterparty_primary",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Primary Counterparty"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contract_number",
+   "fieldtype": "Data",
+   "label": "Contract Number"
+  },
+  {
+   "fieldname": "external_reference",
+   "fieldtype": "Data",
+   "label": "External Reference"
+  },
+  {
+   "default": "Internal",
+   "fieldname": "source",
+   "fieldtype": "Select",
+   "label": "Source",
+   "options": "Internal\nImported\nEmail\nAPI\nWeb Form\nCounterparty",
+   "reqd": 1
+  },
+  {
+   "fieldname": "business_owner",
+   "fieldtype": "Link",
+   "label": "Business Owner",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "legal_owner",
+   "fieldtype": "Link",
+   "label": "Legal Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "sales_owner",
+   "fieldtype": "Link",
+   "label": "Sales Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "procurement_owner",
+   "fieldtype": "Link",
+   "label": "Procurement Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "current_version",
+   "fieldtype": "Link",
+   "label": "Current Version",
+   "options": "Contract Version"
+  },
+  {
+   "fieldname": "parent_contract",
+   "fieldtype": "Link",
+   "label": "Parent Contract",
+   "options": "Contract"
+  },
+  {
+   "fieldname": "tab_terms",
+   "fieldtype": "Tab Break",
+   "label": "Dates & Financials"
+  },
+  {
+   "fieldname": "effective_date",
+   "fieldtype": "Date",
+   "label": "Effective Date"
+  },
+  {
+   "fieldname": "expiration_date",
+   "fieldtype": "Date",
+   "label": "Expiration Date"
+  },
+  {
+   "fieldname": "renewal_date",
+   "fieldtype": "Date",
+   "label": "Renewal Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "auto_renewal",
+   "fieldtype": "Check",
+   "label": "Auto Renewal"
+  },
+  {
+   "fieldname": "notice_period_days",
+   "fieldtype": "Int",
+   "label": "Notice Period (Days)"
+  },
+  {
+   "fieldname": "notice_deadline",
+   "fieldtype": "Date",
+   "label": "Notice Deadline"
+  },
+  {
+   "fieldname": "column_break_terms",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "contract_value",
+   "fieldtype": "Currency",
+   "label": "Contract Value",
+   "options": "currency"
+  },
+  {
+   "default": "Fixed",
+   "fieldname": "contract_value_type",
+   "fieldtype": "Select",
+   "label": "Value Type",
+   "options": "Fixed\nRecurring\nUsage\nUnknown"
+  },
+  {
+   "fieldname": "payment_terms",
+   "fieldtype": "Data",
+   "label": "Payment Terms"
+  },
+  {
+   "fieldname": "governing_law",
+   "fieldtype": "Data",
+   "label": "Governing Law"
+  },
+  {
+   "fieldname": "jurisdiction",
+   "fieldtype": "Data",
+   "label": "Jurisdiction"
+  },
+  {
+   "fieldname": "contract_timezone",
+   "fieldtype": "Data",
+   "label": "Timezone"
+  },
+  {
+   "default": "English",
+   "fieldname": "language",
+   "fieldtype": "Select",
+   "label": "Language",
+   "options": "English\nArabic\nBilingual\nOther"
+  },
+  {
+   "default": "Standard",
+   "fieldname": "confidentiality",
+   "fieldtype": "Select",
+   "label": "Confidentiality",
+   "options": "Standard\nEnhanced\nStrict"
+  },
+  {
+   "fieldname": "tab_parties",
+   "fieldtype": "Tab Break",
+   "label": "Parties"
+  },
+  {
+   "fieldname": "parties",
+   "fieldtype": "Table",
+   "label": "Contract Parties",
+   "options": "Contract Party Row"
+  },
+  {
+   "fieldname": "tab_clauses",
+   "fieldtype": "Tab Break",
+   "label": "Clauses"
+  },
+  {
+   "fieldname": "clauses",
+   "fieldtype": "Table",
+   "label": "Contract Clauses",
+   "options": "Contract Clause Row"
+  },
+  {
+   "fieldname": "tab_key_terms",
+   "fieldtype": "Tab Break",
+   "label": "Terms & Conditions"
+  },
+  {
+   "fieldname": "terms",
+   "fieldtype": "Table",
+   "label": "Contract Terms",
+   "options": "Contract Term Row"
+  },
+  {
+   "fieldname": "tab_erp",
+   "fieldtype": "Tab Break",
+   "label": "ERPNext Links"
+  },
+  {
+   "fieldname": "erp_references",
+   "fieldtype": "Table",
+   "label": "ERPNext References",
+   "options": "Contract ERP Reference Row"
+  },
+  {
+   "fieldname": "tab_execution_status",
+   "fieldtype": "Tab Break",
+   "label": "Governance & Risk"
+  },
+  {
+   "default": "0",
+   "fieldname": "executed",
+   "fieldtype": "Check",
+   "label": "Executed"
+  },
+  {
+   "fieldname": "executed_on",
+   "fieldtype": "Datetime",
+   "label": "Executed On"
+  },
+  {
+   "fieldname": "signed_document",
+   "fieldtype": "Attach",
+   "label": "Final Executed Agreement"
+  },
+  {
+   "fieldname": "archive_date",
+   "fieldtype": "Date",
+   "label": "Archive Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "legal_hold",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Legal Hold Active"
+  },
+  {
+   "fieldname": "column_break_governance",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Low",
+   "fieldname": "risk_level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Risk Level",
+   "options": "Low\nMedium\nHigh\nCritical"
+  },
+  {
+   "fieldname": "risk_score",
+   "fieldtype": "Float",
+   "label": "Risk Score"
+  },
+  {
+   "fieldname": "compliance_score",
+   "fieldtype": "Float",
+   "label": "Compliance Score"
+  },
+  {
+   "fieldname": "performance_score",
+   "fieldtype": "Float",
+   "label": "Performance Score"
+  },
+  {
+   "fieldname": "renewal_score",
+   "fieldtype": "Float",
+   "label": "Renewal Health Score"
+  },
+  {
+   "fieldname": "tab_summary",
+   "fieldtype": "Tab Break",
+   "label": "Summary & AI"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Executive Summary"
+  },
+  {
+   "fieldname": "section_break_ai",
+   "fieldtype": "Section Break",
+   "label": "AI Intelligence & Overview"
+  },
+  {
+   "fieldname": "ai_summary",
+   "fieldtype": "Long Text",
+   "label": "AI Contract Synthesis"
+  },
+  {
+   "fieldname": "ai_last_reviewed_on",
+   "fieldtype": "Datetime",
+   "label": "AI Last Analyzed"
+  },
+  {
+   "fieldname": "tags",
+   "fieldtype": "Table",
+   "label": "Tags",
+   "options": "Contract Tag Row"
+  }
+ ],
+ "links": [],
+ "modified": "2026-09-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Contract Management",
+ "name": "Contract",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Contract Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Contract Owner"
+  },
+  {
+   "read": 1,
+   "role": "Legal Counsel",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Executive Viewer"
+  },
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

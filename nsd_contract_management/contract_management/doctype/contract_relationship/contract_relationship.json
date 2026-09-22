@@ -1,0 +1,71 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-09-22 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "parent_contract",
+  "child_contract",
+  "relationship_type",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "parent_contract",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Primary Contract",
+   "options": "Contract",
+   "reqd": 1
+  },
+  {
+   "fieldname": "child_contract",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Related Contract",
+   "options": "Contract",
+   "reqd": 1
+  },
+  {
+   "fieldname": "relationship_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Relationship Type",
+   "options": "Parent Agreement\nChild Agreement\nAmendment Of\nRenewal Of\nSOW Of\nOrder Form Of\nAddendum Of\nSupersedes\nRelated\nSettlement Of\nTermination Of",
+   "reqd": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "links": [],
+ "modified": "2026-09-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Contract Management",
+ "name": "Contract Relationship",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Contract Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,126 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "CPP-.YYYY.-.#####",
+ "creation": "2026-09-22 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "contract",
+  "metric",
+  "status",
+  "score",
+  "column_break_1",
+  "period_start",
+  "period_end",
+  "target_value",
+  "actual_value",
+  "evidence",
+  "section_break_notes",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "contract",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Contract",
+   "options": "Contract",
+   "reqd": 1
+  },
+  {
+   "fieldname": "metric",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Metric",
+   "options": "Contract Performance Metric",
+   "reqd": 1
+  },
+  {
+   "default": "On Track",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "On Track\nAt Risk\nBreached",
+   "reqd": 1
+  },
+  {
+   "fieldname": "score",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Score (%)"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "period_start",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Period Start",
+   "reqd": 1
+  },
+  {
+   "fieldname": "period_end",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Period End",
+   "reqd": 1
+  },
+  {
+   "fieldname": "target_value",
+   "fieldtype": "Float",
+   "label": "Target Value"
+  },
+  {
+   "fieldname": "actual_value",
+   "fieldtype": "Float",
+   "label": "Actual Value"
+  },
+  {
+   "fieldname": "evidence",
+   "fieldtype": "Attach",
+   "label": "Supporting Evidence"
+  },
+  {
+   "fieldname": "section_break_notes",
+   "fieldtype": "Section Break",
+   "label": "Performance Period Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Performance Notes"
+  }
+ ],
+ "links": [],
+ "modified": "2026-09-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Contract Management",
+ "name": "Contract Performance Period",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Contract Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "sort_field": "period_end",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

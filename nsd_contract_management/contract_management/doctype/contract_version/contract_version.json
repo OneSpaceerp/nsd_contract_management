@@ -1,0 +1,157 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "CTV-.YYYY.-.#####",
+ "creation": "2026-09-22 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "contract",
+  "version_no",
+  "version_label",
+  "version_status",
+  "source_type",
+  "immutable",
+  "column_break_1",
+  "document_file",
+  "source_document",
+  "hash_sha256",
+  "created_from_version",
+  "created_by_user",
+  "generated_on",
+  "approved_on",
+  "executed_on",
+  "section_break_summary",
+  "change_summary"
+ ],
+ "fields": [
+  {
+   "fieldname": "contract",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Contract",
+   "options": "Contract",
+   "reqd": 1
+  },
+  {
+   "fieldname": "version_no",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Version No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "version_label",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Version Label"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "version_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nNegotiation\nApproved\nExecuted\nSuperseded",
+   "reqd": 1
+  },
+  {
+   "default": "Generated",
+   "fieldname": "source_type",
+   "fieldtype": "Select",
+   "label": "Source Type",
+   "options": "Generated\nUploaded\nAmended\nImported"
+  },
+  {
+   "default": "0",
+   "fieldname": "immutable",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Immutable"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "document_file",
+   "fieldtype": "Attach",
+   "label": "Rendered Document (PDF / DOCX)"
+  },
+  {
+   "fieldname": "source_document",
+   "fieldtype": "Attach",
+   "label": "Source Uploaded File"
+  },
+  {
+   "fieldname": "hash_sha256",
+   "fieldtype": "Data",
+   "label": "SHA-256 Digest"
+  },
+  {
+   "fieldname": "created_from_version",
+   "fieldtype": "Link",
+   "label": "Created From Version",
+   "options": "Contract Version"
+  },
+  {
+   "fieldname": "created_by_user",
+   "fieldtype": "Link",
+   "label": "Created By User",
+   "options": "User"
+  },
+  {
+   "fieldname": "generated_on",
+   "fieldtype": "Datetime",
+   "label": "Generated On"
+  },
+  {
+   "fieldname": "approved_on",
+   "fieldtype": "Datetime",
+   "label": "Approved On"
+  },
+  {
+   "fieldname": "executed_on",
+   "fieldtype": "Datetime",
+   "label": "Executed On"
+  },
+  {
+   "fieldname": "section_break_summary",
+   "fieldtype": "Section Break",
+   "label": "Change Summary"
+  },
+  {
+   "fieldname": "change_summary",
+   "fieldtype": "Text Editor",
+   "label": "Changes In This Version"
+  }
+ ],
+ "links": [],
+ "modified": "2026-09-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Contract Management",
+ "name": "Contract Version",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Contract Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "sort_field": "version_no",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

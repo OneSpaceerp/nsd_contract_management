@@ -1,0 +1,93 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-09-22 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "default_notice_period_days",
+  "default_contract_timezone",
+  "default_signature_provider",
+  "column_break_1",
+  "enable_auto_renewal_reminders",
+  "enable_obligation_escalation",
+  "escalation_email_recipient",
+  "allow_ai_auto_extraction"
+ ],
+ "fields": [
+  {
+   "default": "60",
+   "fieldname": "default_notice_period_days",
+   "fieldtype": "Int",
+   "label": "Default Notice Period (Days)"
+  },
+  {
+   "default": "UTC",
+   "fieldname": "default_contract_timezone",
+   "fieldtype": "Data",
+   "label": "Default Timezone"
+  },
+  {
+   "fieldname": "default_signature_provider",
+   "fieldtype": "Link",
+   "label": "Default Signature Provider",
+   "options": "Signature Provider"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_auto_renewal_reminders",
+   "fieldtype": "Check",
+   "label": "Enable Auto Renewal Reminders"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_obligation_escalation",
+   "fieldtype": "Check",
+   "label": "Enable Obligation Escalations"
+  },
+  {
+   "fieldname": "escalation_email_recipient",
+   "fieldtype": "Data",
+   "label": "Default Escalation Email",
+   "options": "Email"
+  },
+  {
+   "default": "1",
+   "fieldname": "allow_ai_auto_extraction",
+   "fieldtype": "Check",
+   "label": "Trigger AI Extraction on Version Upload"
+  }
+ ],
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-09-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Contract Management",
+ "name": "Contract Management Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Contract System Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,150 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "SIG-.YYYY.-.#####",
+ "creation": "2026-09-22 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "contract",
+  "provider",
+  "status",
+  "idempotency_key",
+  "provider_request_id",
+  "column_break_1",
+  "signing_url",
+  "sent_on",
+  "completed_on",
+  "expires_on",
+  "identity_verification_required",
+  "notary_required",
+  "section_break_signers",
+  "signers",
+  "section_break_raw",
+  "raw_provider_response"
+ ],
+ "fields": [
+  {
+   "fieldname": "contract",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Contract",
+   "options": "Contract",
+   "reqd": 1
+  },
+  {
+   "fieldname": "provider",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Provider",
+   "options": "Signature Provider",
+   "reqd": 1
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nSent\nViewed\nPartially Signed\nCompleted\nDeclined\nExpired\nCancelled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "idempotency_key",
+   "fieldtype": "Data",
+   "label": "Idempotency Key",
+   "unique": 1
+  },
+  {
+   "fieldname": "provider_request_id",
+   "fieldtype": "Data",
+   "label": "Provider Envelope ID"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "signing_url",
+   "fieldtype": "Data",
+   "label": "Signing Portal URL"
+  },
+  {
+   "fieldname": "sent_on",
+   "fieldtype": "Datetime",
+   "label": "Sent On"
+  },
+  {
+   "fieldname": "completed_on",
+   "fieldtype": "Datetime",
+   "label": "Completed On"
+  },
+  {
+   "fieldname": "expires_on",
+   "fieldtype": "Datetime",
+   "label": "Expires On"
+  },
+  {
+   "default": "0",
+   "fieldname": "identity_verification_required",
+   "fieldtype": "Check",
+   "label": "ID Verification Required"
+  },
+  {
+   "default": "0",
+   "fieldname": "notary_required",
+   "fieldtype": "Check",
+   "label": "Notarization Required"
+  },
+  {
+   "fieldname": "section_break_signers",
+   "fieldtype": "Section Break",
+   "label": "Signatories"
+  },
+  {
+   "fieldname": "signers",
+   "fieldtype": "Table",
+   "label": "Signers",
+   "options": "Contract Signer Row"
+  },
+  {
+   "fieldname": "section_break_raw",
+   "fieldtype": "Section Break",
+   "label": "Provider Response Payload"
+  },
+  {
+   "fieldname": "raw_provider_response",
+   "fieldtype": "Code",
+   "label": "Raw Response (JSON)",
+   "options": "JSON"
+  }
+ ],
+ "links": [],
+ "modified": "2026-09-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Contract Management",
+ "name": "Signature Request",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Contract Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

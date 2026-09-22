@@ -1,0 +1,150 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "LEAK-.YYYY.-.#####",
+ "creation": "2026-09-22 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "contract",
+  "rule",
+  "status",
+  "severity",
+  "source_doctype",
+  "source_name",
+  "column_break_1",
+  "expected_value",
+  "actual_value",
+  "variance",
+  "financial_impact",
+  "currency",
+  "owner",
+  "section_break_evidence",
+  "evidence"
+ ],
+ "fields": [
+  {
+   "fieldname": "contract",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Contract",
+   "options": "Contract",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rule",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Leakage Rule",
+   "options": "Price Variance\nUncontracted Spend\nMinimum Commitment Not Billed\nDelivered Not Invoiced\nBilled Beyond Quantity\nPayment Outside Terms",
+   "reqd": 1
+  },
+  {
+   "default": "Open",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Open\nAcknowledged\nResolved\nWaived",
+   "reqd": 1
+  },
+  {
+   "default": "Medium",
+   "fieldname": "severity",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Severity",
+   "options": "Low\nMedium\nHigh\nCritical"
+  },
+  {
+   "fieldname": "source_doctype",
+   "fieldtype": "Link",
+   "label": "Source DocType",
+   "options": "DocType",
+   "reqd": 1
+  },
+  {
+   "fieldname": "source_name",
+   "fieldtype": "Dynamic Link",
+   "label": "Source Document Name",
+   "options": "source_doctype",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "expected_value",
+   "fieldtype": "Float",
+   "label": "Expected (Contracted) Rate/Val"
+  },
+  {
+   "fieldname": "actual_value",
+   "fieldtype": "Float",
+   "label": "Actual (Transacted) Rate/Val"
+  },
+  {
+   "fieldname": "variance",
+   "fieldtype": "Float",
+   "label": "Variance"
+  },
+  {
+   "fieldname": "financial_impact",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Financial Impact",
+   "options": "currency"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "owner",
+   "fieldtype": "Link",
+   "label": "Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "section_break_evidence",
+   "fieldtype": "Section Break",
+   "label": "Evidence & Transaction Details"
+  },
+  {
+   "fieldname": "evidence",
+   "fieldtype": "Small Text",
+   "label": "Audit Evidence"
+  }
+ ],
+ "links": [],
+ "modified": "2026-09-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Contract Management",
+ "name": "Contract Leakage Finding",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Contract Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Finance User"
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

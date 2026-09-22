@@ -1,0 +1,61 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-09-22 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "order_no",
+  "clause",
+  "section_title",
+  "is_mandatory",
+  "condition_rule"
+ ],
+ "fields": [
+  {
+   "fieldname": "order_no",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Order",
+   "reqd": 1
+  },
+  {
+   "fieldname": "clause",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Clause",
+   "options": "Clause",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Section Heading"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_mandatory",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Mandatory"
+  },
+  {
+   "fieldname": "condition_rule",
+   "fieldtype": "Data",
+   "label": "Inclusion Condition"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2026-09-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Contract Management",
+ "name": "Template Clause Row",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "order_no",
+ "sort_order": "ASC",
+ "track_changes": 0
+}

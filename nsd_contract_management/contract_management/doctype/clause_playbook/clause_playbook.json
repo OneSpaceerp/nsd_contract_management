@@ -1,0 +1,92 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:playbook_name",
+ "creation": "2026-09-22 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "playbook_name",
+  "contract_type",
+  "company",
+  "active",
+  "description",
+  "section_break_rules",
+  "rules"
+ ],
+ "fields": [
+  {
+   "fieldname": "playbook_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Playbook Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "contract_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Contract Type",
+   "options": "Contract Type"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "default": "1",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Active"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "section_break_rules",
+   "fieldtype": "Section Break",
+   "label": "Playbook Clause Rules"
+  },
+  {
+   "fieldname": "rules",
+   "fieldtype": "Table",
+   "label": "Rules",
+   "options": "Playbook Rule Row"
+  }
+ ],
+ "links": [],
+ "modified": "2026-09-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Contract Management",
+ "name": "Clause Playbook",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Legal Counsel",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "sort_field": "playbook_name",
+ "sort_order": "ASC",
+ "track_changes": 1
+}

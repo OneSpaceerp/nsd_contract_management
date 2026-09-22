@@ -1,0 +1,146 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:contract_type_name",
+ "creation": "2026-09-22 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "contract_type_name",
+  "code",
+  "active",
+  "default_template",
+  "default_playbook",
+  "column_break_1",
+  "default_contract_duration_days",
+  "default_notice_days",
+  "default_workflow",
+  "section_break_governance",
+  "requires_legal_review",
+  "requires_finance_review",
+  "requires_compliance_review",
+  "section_break_desc",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "contract_type_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Contract Type Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Active"
+  },
+  {
+   "fieldname": "default_template",
+   "fieldtype": "Link",
+   "label": "Default Template",
+   "options": "Contract Template"
+  },
+  {
+   "fieldname": "default_playbook",
+   "fieldtype": "Link",
+   "label": "Default Playbook",
+   "options": "Clause Playbook"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "default_contract_duration_days",
+   "fieldtype": "Int",
+   "label": "Default Duration (Days)"
+  },
+  {
+   "fieldname": "default_notice_days",
+   "fieldtype": "Int",
+   "label": "Default Notice (Days)"
+  },
+  {
+   "fieldname": "default_workflow",
+   "fieldtype": "Link",
+   "label": "Default Workflow",
+   "options": "Workflow"
+  },
+  {
+   "fieldname": "section_break_governance",
+   "fieldtype": "Section Break",
+   "label": "Review Requirements"
+  },
+  {
+   "default": "0",
+   "fieldname": "requires_legal_review",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Requires Legal Review"
+  },
+  {
+   "default": "0",
+   "fieldname": "requires_finance_review",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Requires Finance Review"
+  },
+  {
+   "default": "0",
+   "fieldname": "requires_compliance_review",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Requires Compliance Review"
+  },
+  {
+   "fieldname": "section_break_desc",
+   "fieldtype": "Section Break",
+   "label": "Description"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  }
+ ],
+ "links": [],
+ "modified": "2026-09-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Contract Management",
+ "name": "Contract Type",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Contract Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "sort_field": "contract_type_name",
+ "sort_order": "ASC",
+ "track_changes": 1
+}

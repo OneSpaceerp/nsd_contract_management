@@ -1,0 +1,40 @@
+/* Copyright (c) 2026, NSD Core Architecture Team and contributors */
+/* For license information, please see license.txt */
+
+.contract-risk-pill {
+	display: inline-block;
+	padding: 2px 8px;
+	border-radius: 12px;
+	font-weight: bold;
+	font-size: 11px;
+}
+
+.contract-risk-critical {
+	background-color: #fee2e2;
+	color: #b91c1c;
+}
+
+.contract-risk-high {
+	background-color: #ffedd5;
+	color: #c2410c;
+}
+
+.contract-risk-medium {
+	background-color: #fef3c7;
+	color: #b45309;
+}
+
+.contract-risk-low {
+	background-color: #dcfce7;
+	color: #15803d;
+}
+
+.legal-hold-badge {
+	background-color: #dc2626;
+	color: #ffffff;
+	font-weight: 600;
+	padding: 3px 10px;
+	border-radius: 4px;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}

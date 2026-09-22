@@ -1,0 +1,83 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-09-22 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "step_no",
+  "approver_type",
+  "approver",
+  "approver_role",
+  "status",
+  "due_date",
+  "acted_on",
+  "comments"
+ ],
+ "fields": [
+  {
+   "fieldname": "step_no",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Step No",
+   "reqd": 1
+  },
+  {
+   "default": "Role",
+   "fieldname": "approver_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Approver Type",
+   "options": "User\nRole\nDepartment\nRule"
+  },
+  {
+   "fieldname": "approver",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Approver User",
+   "options": "User"
+  },
+  {
+   "fieldname": "approver_role",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Approver Role",
+   "options": "Role"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Pending\nApproved\nRejected\nSkipped"
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date"
+  },
+  {
+   "fieldname": "acted_on",
+   "fieldtype": "Datetime",
+   "label": "Acted On"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Small Text",
+   "label": "Comments"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2026-09-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Contract Management",
+ "name": "Contract Approval Step Row",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "step_no",
+ "sort_order": "ASC",
+ "track_changes": 0
+}

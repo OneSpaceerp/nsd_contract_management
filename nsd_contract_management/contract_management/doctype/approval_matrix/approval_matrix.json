@@ -1,0 +1,118 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:matrix_name",
+ "creation": "2026-09-22 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "matrix_name",
+  "active",
+  "contract_type",
+  "company",
+  "column_break_1",
+  "min_value",
+  "max_value",
+  "risk_level",
+  "fallback_approver_role",
+  "section_break_rules",
+  "rules"
+ ],
+ "fields": [
+  {
+   "fieldname": "matrix_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Matrix Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Active"
+  },
+  {
+   "fieldname": "contract_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Contract Type",
+   "options": "Contract Type"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "min_value",
+   "fieldtype": "Currency",
+   "label": "Minimum Contract Value"
+  },
+  {
+   "fieldname": "max_value",
+   "fieldtype": "Currency",
+   "label": "Maximum Contract Value"
+  },
+  {
+   "default": "All",
+   "fieldname": "risk_level",
+   "fieldtype": "Select",
+   "label": "Applicable Risk Level",
+   "options": "All\nLow\nMedium\nHigh\nCritical"
+  },
+  {
+   "fieldname": "fallback_approver_role",
+   "fieldtype": "Link",
+   "label": "Fallback Approver Role",
+   "options": "Role"
+  },
+  {
+   "fieldname": "section_break_rules",
+   "fieldtype": "Section Break",
+   "label": "Dynamic Approval Conditions"
+  },
+  {
+   "fieldname": "rules",
+   "fieldtype": "Table",
+   "label": "Approval Rules",
+   "options": "Workflow Rule Condition Row"
+  }
+ ],
+ "links": [],
+ "modified": "2026-09-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Contract Management",
+ "name": "Approval Matrix",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Contract Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "sort_field": "matrix_name",
+ "sort_order": "ASC",
+ "track_changes": 1
+}

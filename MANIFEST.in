@@ -1,0 +1,17 @@
+include MANIFEST.in
+include README.md
+include license.txt
+include pyproject.toml
+
+recursive-include nsd_contract_management *.css
+recursive-include nsd_contract_management *.csv
+recursive-include nsd_contract_management *.html
+recursive-include nsd_contract_management *.ico
+recursive-include nsd_contract_management *.js
+recursive-include nsd_contract_management *.json
+recursive-include nsd_contract_management *.md
+recursive-include nsd_contract_management *.png
+recursive-include nsd_contract_management *.py
+recursive-include nsd_contract_management *.svg
+recursive-include nsd_contract_management *.txt
+recursive-exclude nsd_contract_management *.pyc

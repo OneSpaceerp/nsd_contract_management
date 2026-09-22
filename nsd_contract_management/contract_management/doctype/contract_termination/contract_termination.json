@@ -1,0 +1,121 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "TRM-.YYYY.-.#####",
+ "creation": "2026-09-22 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "contract",
+  "termination_type",
+  "status",
+  "effective_date",
+  "column_break_1",
+  "notice_date",
+  "termination_fee",
+  "currency",
+  "exit_obligations_completed",
+  "section_break_reason",
+  "reason"
+ ],
+ "fields": [
+  {
+   "fieldname": "contract",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Contract",
+   "options": "Contract",
+   "reqd": 1
+  },
+  {
+   "default": "For Convenience",
+   "fieldname": "termination_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Termination Type",
+   "options": "For Convenience\nFor Cause\nMutual\nExpiration\nDefault",
+   "reqd": 1
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nPending Approval\nApproved\nEffective\nCancelled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "effective_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Effective Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "notice_date",
+   "fieldtype": "Date",
+   "label": "Notice Date"
+  },
+  {
+   "fieldname": "termination_fee",
+   "fieldtype": "Currency",
+   "label": "Termination Fee",
+   "options": "currency"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "default": "0",
+   "fieldname": "exit_obligations_completed",
+   "fieldtype": "Check",
+   "label": "Exit Obligations Completed"
+  },
+  {
+   "fieldname": "section_break_reason",
+   "fieldtype": "Section Break",
+   "label": "Reason & Basis"
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Text Editor",
+   "label": "Termination Reason"
+  }
+ ],
+ "links": [],
+ "modified": "2026-09-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Contract Management",
+ "name": "Contract Termination",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Contract Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

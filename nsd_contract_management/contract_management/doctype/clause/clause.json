@@ -1,0 +1,119 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "CLA-.#####",
+ "creation": "2026-09-22 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "clause_name",
+  "clause_code",
+  "clause_category",
+  "active",
+  "column_break_1",
+  "preferred_version",
+  "risk_level",
+  "mandatory",
+  "prohibited",
+  "section_break_notes",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "clause_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Clause Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "clause_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Clause Code",
+   "unique": 1
+  },
+  {
+   "fieldname": "clause_category",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Category",
+   "options": "Clause Category"
+  },
+  {
+   "default": "1",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Active"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "preferred_version",
+   "fieldtype": "Link",
+   "label": "Preferred Version",
+   "options": "Clause Version"
+  },
+  {
+   "default": "Medium",
+   "fieldname": "risk_level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Risk Level",
+   "options": "Low\nMedium\nHigh\nCritical"
+  },
+  {
+   "default": "0",
+   "fieldname": "mandatory",
+   "fieldtype": "Check",
+   "label": "Mandatory Clause"
+  },
+  {
+   "default": "0",
+   "fieldname": "prohibited",
+   "fieldtype": "Check",
+   "label": "Prohibited Clause"
+  },
+  {
+   "fieldname": "section_break_notes",
+   "fieldtype": "Section Break",
+   "label": "Legal Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "links": [],
+ "modified": "2026-09-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Contract Management",
+ "name": "Clause",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Legal Counsel",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "sort_field": "clause_name",
+ "sort_order": "ASC",
+ "track_changes": 1
+}

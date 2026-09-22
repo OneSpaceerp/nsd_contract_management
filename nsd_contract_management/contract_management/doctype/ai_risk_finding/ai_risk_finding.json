@@ -1,0 +1,147 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "RISK-.YYYY.-.#####",
+ "creation": "2026-09-22 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "ai_review",
+  "risk_category",
+  "severity",
+  "status",
+  "score",
+  "owner",
+  "column_break_1",
+  "clause_reference",
+  "required_approval",
+  "section_break_rationale",
+  "rationale",
+  "evidence",
+  "section_break_action",
+  "standard_position",
+  "recommended_action"
+ ],
+ "fields": [
+  {
+   "fieldname": "ai_review",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "AI Review Job",
+   "options": "AI Review",
+   "reqd": 1
+  },
+  {
+   "fieldname": "risk_category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Category",
+   "options": "Commercial\nFinancial\nLegal\nLiability\nTermination\nPayment\nPrivacy\nSecurity\nIP\nSLA\nCompliance\nInsurance\nJurisdiction\nOperational\nRenewal",
+   "reqd": 1
+  },
+  {
+   "default": "Medium",
+   "fieldname": "severity",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Severity",
+   "options": "Low\nMedium\nHigh\nCritical",
+   "reqd": 1
+  },
+  {
+   "default": "Open",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Open\nAcknowledged\nResolved\nWaived",
+   "reqd": 1
+  },
+  {
+   "fieldname": "score",
+   "fieldtype": "Float",
+   "label": "Risk Score"
+  },
+  {
+   "fieldname": "owner",
+   "fieldtype": "Link",
+   "label": "Assigned Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "clause_reference",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Clause Reference"
+  },
+  {
+   "default": "0",
+   "fieldname": "required_approval",
+   "fieldtype": "Check",
+   "label": "Requires Approval to Waive"
+  },
+  {
+   "fieldname": "section_break_rationale",
+   "fieldtype": "Section Break",
+   "label": "Risk Analysis & Evidence"
+  },
+  {
+   "fieldname": "rationale",
+   "fieldtype": "Long Text",
+   "label": "Why It Matters / Risk Analysis",
+   "reqd": 1
+  },
+  {
+   "fieldname": "evidence",
+   "fieldtype": "Long Text",
+   "label": "Contract Clause Evidence"
+  },
+  {
+   "fieldname": "section_break_action",
+   "fieldtype": "Section Break",
+   "label": "Mitigation & Recommendations"
+  },
+  {
+   "fieldname": "standard_position",
+   "fieldtype": "Long Text",
+   "label": "Our Preferred Standard Position"
+  },
+  {
+   "fieldname": "recommended_action",
+   "fieldtype": "Long Text",
+   "label": "Recommended Negotiation Action"
+  }
+ ],
+ "links": [],
+ "modified": "2026-09-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Contract Management",
+ "name": "AI Risk Finding",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Contract Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

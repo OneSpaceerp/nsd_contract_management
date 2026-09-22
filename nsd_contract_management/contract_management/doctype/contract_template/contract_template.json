@@ -1,0 +1,137 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:template_name",
+ "creation": "2026-09-22 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "template_name",
+  "contract_type",
+  "company",
+  "active",
+  "column_break_1",
+  "language",
+  "template_format",
+  "document_template_file",
+  "section_break_content",
+  "body_html",
+  "section_break_variables",
+  "variables",
+  "section_break_clauses",
+  "clauses"
+ ],
+ "fields": [
+  {
+   "fieldname": "template_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Template Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "contract_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Contract Type",
+   "options": "Contract Type"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "default": "1",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Active"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "English",
+   "fieldname": "language",
+   "fieldtype": "Select",
+   "label": "Language",
+   "options": "English\nArabic\nBilingual\nOther"
+  },
+  {
+   "default": "Jinja",
+   "fieldname": "template_format",
+   "fieldtype": "Select",
+   "label": "Template Format",
+   "options": "Jinja\nDOCX"
+  },
+  {
+   "fieldname": "document_template_file",
+   "fieldtype": "Attach",
+   "label": "DOCX Template File"
+  },
+  {
+   "fieldname": "section_break_content",
+   "fieldtype": "Section Break",
+   "label": "Template Body (HTML / Jinja)"
+  },
+  {
+   "fieldname": "body_html",
+   "fieldtype": "Text Editor",
+   "label": "Body Content"
+  },
+  {
+   "fieldname": "section_break_variables",
+   "fieldtype": "Section Break",
+   "label": "Configured Variables"
+  },
+  {
+   "fieldname": "variables",
+   "fieldtype": "Table",
+   "label": "Template Variables",
+   "options": "Template Variable Row"
+  },
+  {
+   "fieldname": "section_break_clauses",
+   "fieldtype": "Section Break",
+   "label": "Template Clauses"
+  },
+  {
+   "fieldname": "clauses",
+   "fieldtype": "Table",
+   "label": "Clauses",
+   "options": "Template Clause Row"
+  }
+ ],
+ "links": [],
+ "modified": "2026-09-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Contract Management",
+ "name": "Contract Template",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Legal Counsel",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "sort_field": "template_name",
+ "sort_order": "ASC",
+ "track_changes": 1
+}

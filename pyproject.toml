@@ -1,0 +1,36 @@
+[project]
+name = "nsd_contract_management"
+authors = [{ name = "NSD Core Architecture Team", email = "architecture@nsd.local" }]
+description = "Enterprise Contract Lifecycle Management & Contract Intelligence for ERPNext v16"
+requires-python = ">=3.14"
+readme = "README.md"
+license = { text = "GPL-3.0-or-later" }
+dynamic = ["version"]
+dependencies = [
+    "pydantic>=2.7.0",
+    "python-dateutil>=2.9.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/nsd/nsd_contract_management"
+Repository = "https://github.com/nsd/nsd_contract_management.git"
+
+[build-system]
+requires = ["flit_core >=3.4,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "nsd_contract_management"
+
+[tool.bench.frappe-dependencies]
+frappe = ">=16.0.0,<17.0.0"
+erpnext = ">=16.0.0,<17.0.0"
+
+[tool.ruff]
+line-length = 110
+indent-width = 4
+target-version = "py314"
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "tab"

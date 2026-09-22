@@ -1,0 +1,173 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-09-22 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "enabled",
+  "enable_leakage_detection",
+  "auto_link_source_transactions",
+  "column_break_1",
+  "default_cost_center",
+  "default_project",
+  "section_break_modules",
+  "enable_selling",
+  "enable_buying",
+  "enable_accounts",
+  "enable_projects",
+  "column_break_modules",
+  "enable_subscriptions",
+  "enable_support",
+  "enable_hr",
+  "enable_assets",
+  "section_break_automation",
+  "auto_create_sales_order",
+  "auto_create_purchase_order",
+  "auto_create_project"
+ ],
+ "fields": [
+  {
+   "default": "1",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enable ERPNext Integration Engine"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_leakage_detection",
+   "fieldtype": "Check",
+   "label": "Enable Financial Leakage Detection"
+  },
+  {
+   "default": "1",
+   "fieldname": "auto_link_source_transactions",
+   "fieldtype": "Check",
+   "label": "Auto-Link Downstream ERP Transactions"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "default_cost_center",
+   "fieldtype": "Link",
+   "label": "Default Cost Center",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "default_project",
+   "fieldtype": "Link",
+   "label": "Default Project",
+   "options": "Project"
+  },
+  {
+   "fieldname": "section_break_modules",
+   "fieldtype": "Section Break",
+   "label": "ERPNext Module Integrations"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_selling",
+   "fieldtype": "Check",
+   "label": "Selling (Orders, Delivery, Invoices, Dunning)"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_buying",
+   "fieldtype": "Check",
+   "label": "Buying (RFQ, Quotations, PO, PR, Purchase Invoices)"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_accounts",
+   "fieldtype": "Check",
+   "label": "Accounts & Payments (Payment Entries, Multi-Contract Allocations)"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_projects",
+   "fieldtype": "Check",
+   "label": "Projects (Tasks, Timesheets, Expenses)"
+  },
+  {
+   "fieldname": "column_break_modules",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_subscriptions",
+   "fieldtype": "Check",
+   "label": "Subscriptions (Recurring Contracts & Invoices)"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_support",
+   "fieldtype": "Check",
+   "label": "Support (Issues, SLAs, Maintenance Visits, Warranty)"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_hr",
+   "fieldtype": "Check",
+   "label": "HR (Employees, Onboarding & Separation Obligations)"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_assets",
+   "fieldtype": "Check",
+   "label": "Assets (Asset Lease, Maintenance & Warranty Coverage)"
+  },
+  {
+   "fieldname": "section_break_automation",
+   "fieldtype": "Section Break",
+   "label": "Automated Transaction Generation"
+  },
+  {
+   "default": "0",
+   "fieldname": "auto_create_sales_order",
+   "fieldtype": "Check",
+   "label": "Auto-Create Sales Order on Execution (When Configured)"
+  },
+  {
+   "default": "0",
+   "fieldname": "auto_create_purchase_order",
+   "fieldtype": "Check",
+   "label": "Auto-Create Purchase Order on Execution (When Configured)"
+  },
+  {
+   "default": "0",
+   "fieldname": "auto_create_project",
+   "fieldtype": "Check",
+   "label": "Auto-Create Project from SOW on Execution"
+  }
+ ],
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-09-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Contract Management",
+ "name": "Contract ERPNext Integration Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Contract System Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

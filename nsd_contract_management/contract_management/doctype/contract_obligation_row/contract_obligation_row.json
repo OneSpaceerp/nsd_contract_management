@@ -1,0 +1,78 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-09-22 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "obligation",
+  "title",
+  "obligated_party",
+  "due_date",
+  "priority",
+  "status",
+  "evidence_required"
+ ],
+ "fields": [
+  {
+   "fieldname": "obligation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Obligation Reference",
+   "options": "Contract Obligation"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "obligated_party",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Obligated Party"
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Due Date"
+  },
+  {
+   "default": "Medium",
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Priority",
+   "options": "Low\nMedium\nHigh\nCritical"
+  },
+  {
+   "default": "Open",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Open\nIn Progress\nCompleted\nOverdue\nWaived"
+  },
+  {
+   "default": "0",
+   "fieldname": "evidence_required",
+   "fieldtype": "Check",
+   "label": "Evidence Required"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2026-09-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Contract Management",
+ "name": "Contract Obligation Row",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "due_date",
+ "sort_order": "ASC",
+ "track_changes": 0
+}

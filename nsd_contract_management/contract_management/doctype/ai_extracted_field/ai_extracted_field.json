@@ -1,0 +1,141 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "AIF-.YYYY.-.#####",
+ "creation": "2026-09-22 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "ai_review",
+  "field_name",
+  "confidence",
+  "page_number",
+  "accepted",
+  "accepted_by",
+  "column_break_1",
+  "value_text",
+  "value_number",
+  "value_date",
+  "value_boolean",
+  "normalized_value",
+  "section_break_evidence",
+  "evidence_text",
+  "bounding_box"
+ ],
+ "fields": [
+  {
+   "fieldname": "ai_review",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "AI Review Job",
+   "options": "AI Review",
+   "reqd": 1
+  },
+  {
+   "fieldname": "field_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Contract Field",
+   "reqd": 1
+  },
+  {
+   "fieldname": "confidence",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Confidence"
+  },
+  {
+   "fieldname": "page_number",
+   "fieldtype": "Int",
+   "label": "Page No"
+  },
+  {
+   "default": "0",
+   "fieldname": "accepted",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Accepted / Confirmed"
+  },
+  {
+   "fieldname": "accepted_by",
+   "fieldtype": "Link",
+   "label": "Accepted By",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "value_text",
+   "fieldtype": "Long Text",
+   "in_list_view": 1,
+   "label": "Extracted Text"
+  },
+  {
+   "fieldname": "value_number",
+   "fieldtype": "Float",
+   "label": "Numeric Value"
+  },
+  {
+   "fieldname": "value_date",
+   "fieldtype": "Date",
+   "label": "Date Value"
+  },
+  {
+   "default": "0",
+   "fieldname": "value_boolean",
+   "fieldtype": "Check",
+   "label": "Boolean Value"
+  },
+  {
+   "fieldname": "normalized_value",
+   "fieldtype": "Long Text",
+   "label": "Standardized Value"
+  },
+  {
+   "fieldname": "section_break_evidence",
+   "fieldtype": "Section Break",
+   "label": "Grounded Evidence & Spatial Coordinates"
+  },
+  {
+   "fieldname": "evidence_text",
+   "fieldtype": "Long Text",
+   "label": "Exact Text Citation / Snippet"
+  },
+  {
+   "fieldname": "bounding_box",
+   "fieldtype": "Code",
+   "label": "OCR Bounding Box (JSON)",
+   "options": "JSON"
+  }
+ ],
+ "links": [],
+ "modified": "2026-09-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Contract Management",
+ "name": "AI Extracted Field",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Contract Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

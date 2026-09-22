@@ -1,0 +1,115 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:provider_name",
+ "creation": "2026-09-22 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "provider_name",
+  "provider_type",
+  "model_name",
+  "active",
+  "is_default",
+  "column_break_1",
+  "api_endpoint",
+  "api_key",
+  "temperature",
+  "max_tokens"
+ ],
+ "fields": [
+  {
+   "fieldname": "provider_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Provider Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "Mock",
+   "fieldname": "provider_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Provider Type",
+   "options": "Mock\nOpenAI\nAnthropic\nGemini\nAzure OpenAI\nLocal",
+   "reqd": 1
+  },
+  {
+   "default": "gpt-4o",
+   "fieldname": "model_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Model Identifier",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Active"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_default",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Default"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "api_endpoint",
+   "fieldtype": "Data",
+   "label": "API Endpoint URL"
+  },
+  {
+   "fieldname": "api_key",
+   "fieldtype": "Password",
+   "label": "API Key"
+  },
+  {
+   "default": "0.1",
+   "fieldname": "temperature",
+   "fieldtype": "Float",
+   "label": "Temperature"
+  },
+  {
+   "default": "4096",
+   "fieldname": "max_tokens",
+   "fieldtype": "Int",
+   "label": "Max Output Tokens"
+  }
+ ],
+ "links": [],
+ "modified": "2026-09-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Contract Management",
+ "name": "AI Model Provider",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "AI Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Contract Manager"
+  }
+ ],
+ "sort_field": "provider_name",
+ "sort_order": "ASC",
+ "track_changes": 1
+}

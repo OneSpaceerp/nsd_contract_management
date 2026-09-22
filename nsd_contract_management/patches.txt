@@ -1,0 +1,2 @@
+# Patches for nsd_contract_management
+# Format: [version] dotted.path.to.patch

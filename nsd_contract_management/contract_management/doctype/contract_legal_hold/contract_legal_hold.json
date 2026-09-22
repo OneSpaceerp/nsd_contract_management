@@ -1,0 +1,113 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "HOLD-.YYYY.-.#####",
+ "creation": "2026-09-22 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "contract",
+  "status",
+  "issued_by",
+  "issued_on",
+  "column_break_1",
+  "released_by",
+  "release_on",
+  "section_break_reason",
+  "hold_reason",
+  "scope_description"
+ ],
+ "fields": [
+  {
+   "fieldname": "contract",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Contract",
+   "options": "Contract",
+   "reqd": 1
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Active\nReleased",
+   "reqd": 1
+  },
+  {
+   "fieldname": "issued_by",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Issued By",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "issued_on",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Issued On",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "released_by",
+   "fieldtype": "Link",
+   "label": "Released By",
+   "options": "User"
+  },
+  {
+   "fieldname": "release_on",
+   "fieldtype": "Datetime",
+   "label": "Release Timestamp"
+  },
+  {
+   "fieldname": "section_break_reason",
+   "fieldtype": "Section Break",
+   "label": "Legal Justification & Scope"
+  },
+  {
+   "fieldname": "hold_reason",
+   "fieldtype": "Text Editor",
+   "label": "Legal Hold Reason",
+   "reqd": 1
+  },
+  {
+   "fieldname": "scope_description",
+   "fieldtype": "Long Text",
+   "label": "Litigation / Dispute Scope"
+  }
+ ],
+ "links": [],
+ "modified": "2026-09-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Contract Management",
+ "name": "Contract Legal Hold",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Legal Counsel",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

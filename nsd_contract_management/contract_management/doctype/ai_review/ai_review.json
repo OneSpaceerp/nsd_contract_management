@@ -1,0 +1,154 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "AIR-.YYYY.-.#####",
+ "creation": "2026-09-22 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "contract",
+  "contract_version",
+  "status",
+  "provider",
+  "model",
+  "prompt_policy",
+  "column_break_1",
+  "confidence",
+  "started_on",
+  "completed_on",
+  "token_input",
+  "token_output",
+  "estimated_cost",
+  "section_break_summary",
+  "summary",
+  "section_break_raw",
+  "raw_result"
+ ],
+ "fields": [
+  {
+   "fieldname": "contract",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Contract",
+   "options": "Contract",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contract_version",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Analyzed Version",
+   "options": "Contract Version"
+  },
+  {
+   "default": "Queued",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Queued\nRunning\nCompleted\nFailed\nNeeds Review",
+   "reqd": 1
+  },
+  {
+   "fieldname": "provider",
+   "fieldtype": "Link",
+   "label": "AI Provider",
+   "options": "AI Model Provider"
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "label": "Model"
+  },
+  {
+   "fieldname": "prompt_policy",
+   "fieldtype": "Link",
+   "label": "Prompt Policy",
+   "options": "AI Prompt Policy"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "confidence",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Overall Confidence"
+  },
+  {
+   "fieldname": "started_on",
+   "fieldtype": "Datetime",
+   "label": "Started On"
+  },
+  {
+   "fieldname": "completed_on",
+   "fieldtype": "Datetime",
+   "label": "Completed On"
+  },
+  {
+   "fieldname": "token_input",
+   "fieldtype": "Int",
+   "label": "Input Tokens"
+  },
+  {
+   "fieldname": "token_output",
+   "fieldtype": "Int",
+   "label": "Output Tokens"
+  },
+  {
+   "fieldname": "estimated_cost",
+   "fieldtype": "Currency",
+   "label": "Estimated Cost"
+  },
+  {
+   "fieldname": "section_break_summary",
+   "fieldtype": "Section Break",
+   "label": "Synthesis & Summary"
+  },
+  {
+   "fieldname": "summary",
+   "fieldtype": "Long Text",
+   "label": "Executive Summary"
+  },
+  {
+   "fieldname": "section_break_raw",
+   "fieldtype": "Section Break",
+   "label": "Raw Structured Extraction"
+  },
+  {
+   "fieldname": "raw_result",
+   "fieldtype": "Code",
+   "label": "Raw Output (JSON)",
+   "options": "JSON"
+  }
+ ],
+ "links": [],
+ "modified": "2026-09-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Contract Management",
+ "name": "AI Review",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Contract Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

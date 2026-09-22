@@ -1,0 +1,104 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:policy_name",
+ "creation": "2026-09-22 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "policy_name",
+  "policy_type",
+  "active",
+  "allow_human_override",
+  "section_break_prompts",
+  "system_prompt",
+  "user_prompt_template",
+  "section_break_schema",
+  "json_schema"
+ ],
+ "fields": [
+  {
+   "fieldname": "policy_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Policy Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "policy_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Policy Type",
+   "options": "Extraction\nReview\nRisk Assessment\nNegotiation\nRenewal Brief\nRedline",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Active"
+  },
+  {
+   "default": "1",
+   "fieldname": "allow_human_override",
+   "fieldtype": "Check",
+   "label": "Requires Human Approval for High-Impact Actions"
+  },
+  {
+   "fieldname": "section_break_prompts",
+   "fieldtype": "Section Break",
+   "label": "System Instructions & Prompt Architecture"
+  },
+  {
+   "fieldname": "system_prompt",
+   "fieldtype": "Text Editor",
+   "label": "System Prompt (Security-hardened)"
+  },
+  {
+   "fieldname": "user_prompt_template",
+   "fieldtype": "Text Editor",
+   "label": "User Prompt Template"
+  },
+  {
+   "fieldname": "section_break_schema",
+   "fieldtype": "Section Break",
+   "label": "Output Schema Constraints"
+  },
+  {
+   "fieldname": "json_schema",
+   "fieldtype": "Code",
+   "label": "JSON Schema Specification",
+   "options": "JSON"
+  }
+ ],
+ "links": [],
+ "modified": "2026-09-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Contract Management",
+ "name": "AI Prompt Policy",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "AI Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Contract Manager"
+  }
+ ],
+ "sort_field": "policy_name",
+ "sort_order": "ASC",
+ "track_changes": 1
+}

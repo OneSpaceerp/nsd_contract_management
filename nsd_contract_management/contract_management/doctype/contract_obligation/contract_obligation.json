@@ -1,0 +1,210 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "OBL-.YYYY.-.#####",
+ "creation": "2026-09-22 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "contract",
+  "clause",
+  "title",
+  "obligation_type",
+  "status",
+  "priority",
+  "column_break_1",
+  "obligated_party",
+  "beneficiary_party",
+  "owner",
+  "department",
+  "start_date",
+  "due_date",
+  "recurrence",
+  "trigger_type",
+  "section_break_enforcement",
+  "evidence_required",
+  "evidence_file",
+  "column_break_enforcement",
+  "penalty_value",
+  "currency",
+  "escalation_days",
+  "section_break_desc",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "contract",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Contract",
+   "options": "Contract",
+   "reqd": 1
+  },
+  {
+   "fieldname": "clause",
+   "fieldtype": "Link",
+   "label": "Governing Clause",
+   "options": "Clause"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Obligation Title",
+   "reqd": 1
+  },
+  {
+   "default": "Deliverable",
+   "fieldname": "obligation_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "Deliverable\nPayment\nReporting\nAudit\nInsurance\nConfidentiality\nCompliance\nSLA\nOther",
+   "reqd": 1
+  },
+  {
+   "default": "Open",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Open\nIn Progress\nCompleted\nOverdue\nCancelled\nWaived",
+   "reqd": 1
+  },
+  {
+   "default": "Medium",
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Priority",
+   "options": "Low\nMedium\nHigh\nCritical"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "obligated_party",
+   "fieldtype": "Data",
+   "label": "Obligated Party"
+  },
+  {
+   "fieldname": "beneficiary_party",
+   "fieldtype": "Data",
+   "label": "Beneficiary Party"
+  },
+  {
+   "fieldname": "owner",
+   "fieldtype": "Link",
+   "label": "Assigned Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Due Date"
+  },
+  {
+   "default": "None",
+   "fieldname": "recurrence",
+   "fieldtype": "Select",
+   "label": "Recurrence",
+   "options": "None\nWeekly\nMonthly\nQuarterly\nAnnual"
+  },
+  {
+   "default": "Date",
+   "fieldname": "trigger_type",
+   "fieldtype": "Select",
+   "label": "Trigger Type",
+   "options": "Date\nDelivery\nEvent\nPayment\nManual"
+  },
+  {
+   "fieldname": "section_break_enforcement",
+   "fieldtype": "Section Break",
+   "label": "Evidence & Financial Penalties"
+  },
+  {
+   "default": "0",
+   "fieldname": "evidence_required",
+   "fieldtype": "Check",
+   "label": "Evidence Required"
+  },
+  {
+   "fieldname": "evidence_file",
+   "fieldtype": "Attach",
+   "label": "Uploaded Evidence"
+  },
+  {
+   "fieldname": "column_break_enforcement",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "penalty_value",
+   "fieldtype": "Currency",
+   "label": "Breach Penalty Value",
+   "options": "currency"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "default": "7",
+   "fieldname": "escalation_days",
+   "fieldtype": "Int",
+   "label": "Escalation Window (Days)"
+  },
+  {
+   "fieldname": "section_break_desc",
+   "fieldtype": "Section Break",
+   "label": "Description & Specifics"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Obligation Details"
+  }
+ ],
+ "links": [],
+ "modified": "2026-09-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Contract Management",
+ "name": "Contract Obligation",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Contract Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "sort_field": "due_date",
+ "sort_order": "ASC",
+ "track_changes": 1
+}

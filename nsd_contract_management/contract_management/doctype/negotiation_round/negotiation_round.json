@@ -1,0 +1,138 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "NEG-.YYYY.-.#####",
+ "creation": "2026-09-22 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "contract",
+  "round_no",
+  "status",
+  "participant_type",
+  "participant",
+  "column_break_1",
+  "version_in",
+  "version_out",
+  "change_count",
+  "issue_count",
+  "submitted_by",
+  "submitted_on",
+  "section_break_ai",
+  "ai_summary"
+ ],
+ "fields": [
+  {
+   "fieldname": "contract",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Contract",
+   "options": "Contract",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "round_no",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Round No",
+   "reqd": 1
+  },
+  {
+   "default": "Open",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Open\nResolved\nCancelled",
+   "reqd": 1
+  },
+  {
+   "default": "Counterparty",
+   "fieldname": "participant_type",
+   "fieldtype": "Select",
+   "label": "Participant Type",
+   "options": "Internal\nCounterparty"
+  },
+  {
+   "fieldname": "participant",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Participant / Counterparty"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "version_in",
+   "fieldtype": "Link",
+   "label": "Base Version (In)",
+   "options": "Contract Version"
+  },
+  {
+   "fieldname": "version_out",
+   "fieldtype": "Link",
+   "label": "Revised Version (Out)",
+   "options": "Contract Version"
+  },
+  {
+   "fieldname": "change_count",
+   "fieldtype": "Int",
+   "label": "Redline Changes Count"
+  },
+  {
+   "fieldname": "issue_count",
+   "fieldtype": "Int",
+   "label": "Negotiation Issues Count"
+  },
+  {
+   "fieldname": "submitted_by",
+   "fieldtype": "Data",
+   "label": "Submitted By"
+  },
+  {
+   "fieldname": "submitted_on",
+   "fieldtype": "Datetime",
+   "label": "Submitted On"
+  },
+  {
+   "fieldname": "section_break_ai",
+   "fieldtype": "Section Break",
+   "label": "AI Round Synthesis"
+  },
+  {
+   "fieldname": "ai_summary",
+   "fieldtype": "Long Text",
+   "label": "AI Synthesis & Playbook Deviations"
+  }
+ ],
+ "links": [],
+ "modified": "2026-09-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Contract Management",
+ "name": "Negotiation Round",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Contract Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "sort_field": "round_no",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

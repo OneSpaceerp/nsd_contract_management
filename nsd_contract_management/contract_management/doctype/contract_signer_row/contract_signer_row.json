@@ -1,0 +1,111 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-09-22 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "order_no",
+  "signer_type",
+  "name_and_title",
+  "email",
+  "phone",
+  "status",
+  "column_break_1",
+  "user",
+  "contact",
+  "authentication_method",
+  "required",
+  "signed_on"
+ ],
+ "fields": [
+  {
+   "fieldname": "order_no",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Order",
+   "reqd": 1
+  },
+  {
+   "default": "Counterparty",
+   "fieldname": "signer_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "Internal\nCounterparty\nWitness\nNotary"
+  },
+  {
+   "fieldname": "name_and_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name & Title"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email",
+   "options": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Pending\nSent\nViewed\nSigned\nDeclined"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "label": "User",
+   "options": "User"
+  },
+  {
+   "fieldname": "contact",
+   "fieldtype": "Link",
+   "label": "Contact",
+   "options": "Contact"
+  },
+  {
+   "default": "Email",
+   "fieldname": "authentication_method",
+   "fieldtype": "Select",
+   "label": "Auth Method",
+   "options": "Email\nOTP\nSMS\nIdentity Provider"
+  },
+  {
+   "default": "1",
+   "fieldname": "required",
+   "fieldtype": "Check",
+   "label": "Required"
+  },
+  {
+   "fieldname": "signed_on",
+   "fieldtype": "Datetime",
+   "label": "Signed On"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2026-09-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Contract Management",
+ "name": "Contract Signer Row",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "order_no",
+ "sort_order": "ASC",
+ "track_changes": 0
+}

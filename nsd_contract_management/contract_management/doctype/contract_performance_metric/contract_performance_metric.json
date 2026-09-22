@@ -1,0 +1,129 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "MET-.YYYY.-.#####",
+ "creation": "2026-09-22 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "contract",
+  "metric_name",
+  "metric_type",
+  "active",
+  "column_break_1",
+  "target",
+  "unit",
+  "direction",
+  "owner",
+  "section_break_source",
+  "source_type",
+  "source_reference"
+ ],
+ "fields": [
+  {
+   "fieldname": "contract",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Contract",
+   "options": "Contract",
+   "reqd": 1
+  },
+  {
+   "fieldname": "metric_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Metric Name",
+   "reqd": 1
+  },
+  {
+   "default": "KPI",
+   "fieldname": "metric_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Metric Type",
+   "options": "SLA\nKPI\nFinancial\nVolume\nQuality\nCompliance",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Active"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "target",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Target Benchmark",
+   "reqd": 1
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Data",
+   "label": "Unit of Measure"
+  },
+  {
+   "default": "Higher Better",
+   "fieldname": "direction",
+   "fieldtype": "Select",
+   "label": "Direction",
+   "options": "Higher Better\nLower Better\nRange"
+  },
+  {
+   "fieldname": "owner",
+   "fieldtype": "Link",
+   "label": "Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "section_break_source",
+   "fieldtype": "Section Break",
+   "label": "Data Source & Computation"
+  },
+  {
+   "default": "ERPNext",
+   "fieldname": "source_type",
+   "fieldtype": "Select",
+   "label": "Data Source",
+   "options": "Manual\nERPNext\nAPI\nAI"
+  },
+  {
+   "fieldname": "source_reference",
+   "fieldtype": "Data",
+   "label": "Source Transaction Reference / Expression"
+  }
+ ],
+ "links": [],
+ "modified": "2026-09-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Contract Management",
+ "name": "Contract Performance Metric",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Contract Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

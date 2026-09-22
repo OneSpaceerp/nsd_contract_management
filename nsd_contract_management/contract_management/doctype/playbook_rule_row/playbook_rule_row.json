@@ -1,0 +1,82 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-09-22 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "clause",
+  "rule_name",
+  "preferred_clause_version",
+  "fallback_clause_version",
+  "approval_required_for_fallback",
+  "fallback_approver_role",
+  "risk_weight",
+  "prohibited_terms"
+ ],
+ "fields": [
+  {
+   "fieldname": "clause",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Clause",
+   "options": "Clause",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rule_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Rule Label"
+  },
+  {
+   "fieldname": "preferred_clause_version",
+   "fieldtype": "Link",
+   "label": "Preferred Version",
+   "options": "Clause Version"
+  },
+  {
+   "fieldname": "fallback_clause_version",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Allowed Fallback",
+   "options": "Clause Version"
+  },
+  {
+   "default": "1",
+   "fieldname": "approval_required_for_fallback",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Requires Approval"
+  },
+  {
+   "fieldname": "fallback_approver_role",
+   "fieldtype": "Link",
+   "label": "Approver Role",
+   "options": "Role"
+  },
+  {
+   "default": "1.0",
+   "fieldname": "risk_weight",
+   "fieldtype": "Float",
+   "label": "Risk Weight"
+  },
+  {
+   "fieldname": "prohibited_terms",
+   "fieldtype": "Small Text",
+   "label": "Prohibited Positions"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2026-09-22 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Contract Management",
+ "name": "Playbook Rule Row",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "track_changes": 0
+}
